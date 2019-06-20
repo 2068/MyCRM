@@ -1,26 +1,10 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * {
-            font-family: "Microsoft YaHei";
-        }
-    </style>
-</head>
-<body>
-
-
-<h3 style="text-align:center">删除页面</h3>
-
-
-<form action="" method="post">
-    {% csrf_token %}
-    <button>确认删除？</button>
-    <a href="{{ url }}">取消</a>
-</form>
-
-</body>
-</html>
+{% extends 'base.html' %}
+{% block con %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <div style="margin-top: 300px;margin-left: 500px;">
+            <button class="btn btn-danger">确认删除？</button>
+            <a href="{{ url }}" class="btn btn-success">取消</a>
+        </div>
+    </form>
+{% endblock %}

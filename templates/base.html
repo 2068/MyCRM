@@ -8,12 +8,28 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>CRM客户管理系统</title>
+    <title>CRM学生客户管理系统</title>
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/css/dashboard.css" rel="stylesheet">
     <script src="/static/js/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" href="/static/css/add.css">
     <link rel="stylesheet" href="/static/css/list.css">
+    <script src="/static/chart/highcharts.js"></script>
+    <style>
+        #choice {
+            width: 20px;
+            height: 20px;
+        }
+
+        .choice_item {
+            width: 20px;
+            height: 20px;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,12 +37,12 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">CRM客户管理系统</a>
+            <a class="navbar-brand" href="#">CRM学生客户管理系统</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">用户名：{{ user.name }}</a></li>
-                <li><a href="http://127.0.0.1:8000/login" style="color:#fff; text-decoration:none;" >退出</a></li>
+                <li><a href="http://127.0.0.1:8000/login" style="color:#fff; text-decoration:none;">退出</a></li>
             </ul>
         </div>
     </div>
@@ -52,8 +68,6 @@
         </div>
     </div>
 </div>
-
-
 
 
 <script src="/static/js/jquery.min.js"></script>

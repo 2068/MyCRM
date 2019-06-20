@@ -94,7 +94,7 @@ class Customer(models.Model):
     """
     qq = models.CharField(verbose_name='qq', max_length=64, unique=True, help_text='QQ号必须唯一')
 
-    name = models.CharField(verbose_name='学生姓名', max_length=16)
+    name = models.CharField(verbose_name='客户姓名', max_length=16)
     gender_choices = ((1, '男'), (2, '女'))
     gender = models.SmallIntegerField(verbose_name='性别', choices=gender_choices)
 

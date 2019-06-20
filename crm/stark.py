@@ -202,7 +202,7 @@ class CourseRecordConfig(ModelStark):
 
     def extra_url(self):
         temp = []
-        temp.append(url(r"record_score/(\d+)", self.score))
+        temp.append(url(r"record_score/(\d+)/", self.score))
         return temp
 
     def record(self, obj=None, header=False):
@@ -213,7 +213,7 @@ class CourseRecordConfig(ModelStark):
     def record_score(self, obj=None, header=False):
         if header:
             return "录入成绩"
-        return mark_safe("<a href='record_score/%s'>录入成绩</a>" % obj.pk)
+        return mark_safe("<a href='/stark/crm/courserecord/record_score/%s'>录入成绩</a>" % obj.pk)
 
     list_display = ["class_obj", "day_num", "teacher", record, record_score]
 
